@@ -1,0 +1,247 @@
+$border-color: red;
+$body-background:#000 url(../images/PentagramCemetery.jpg) no-repeat;
+$logo-translate: translate(-50%, -50%);
+$menu-background:#680000 , #FF0000;
+$border-style: groove;
+$slide-show-border-radius: 140px;
+
+html, body, body * {
+	margin: 0;
+	padding: 0;
+	font-family: Helevetica, Arial, 'sans-serif';
+	font-size: 20px;
+}
+
+body {	
+	 background:$body-background;
+	 -webkit-box-shadow: 0px -37px 70px 90px #000 inset;	
+     box-shadow: 0px -37px 70px 90px #000 inset;
+																																																																																																																																																																																																										
+}
+
+.clearfix:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+#wrapper {
+	width: 70%;
+	margin: 0px auto;
+}
+
+#header {		
+	#logo{
+		height:275px;
+		a img {
+			position: relative;
+		    top: 50%;
+		    left: 50%;
+		    margin-right: -50%;
+		    width:285px;
+		    -moz-transform: $logo-translate;
+		    -webkit-transform: $logo-translate;
+		    transform: $logo-translate;
+		}
+	}
+	#menu, #menu-link {
+		border-bottom-left-radius: 50px;
+		border-bottom-right-radius: 50px;
+		border-bottom-style: $border-style;			
+		background: -moz-linear-gradient($menu-background);
+		background: -webkit-linear-gradient($menu-background);	
+		background: linear-gradient($menu-background);
+		ul {				
+		    list-style-type: none;
+		    margin: 0;
+		    padding: 7;
+			
+		}		
+	}
+	#menu li {
+		text-align:center;
+		float: left;
+		text-decoration:none;
+		width: 20%;				  
+	}	
+	a {
+	  	font-family: "Marcellus SC",times,serif;
+	  	font-size: 20px;
+		font-weight: bold;
+	  	text-decoration:none;
+	  	color: white;
+	}
+}
+
+#content-play {
+	color: white;
+	word-wrap: normal;
+	height: 100%;
+	padding: 45px;
+	background-color: rgba(0,0,0,0.8);
+	text-align: justify;
+	border-top-style: $border-style;
+	border-left-style: $border-style;
+	border-right-style: $border-style;
+}
+	
+#slide-show {
+	position:relative;
+	background: rgba(0,0,0 ,0.8);
+	height: 275px;
+	
+	border-top-left-radius: $slide-show-border-radius;
+	border-top-right-radius: $slide-show-border-radius;
+	border-top-style: $border-style;
+	border-left-style: $border-style;
+	border-right-style: $border-style;
+	
+	>img {
+		width: 60%;
+		height: 100%;
+		position:absolute;
+	    left:20%;
+	    
+	    -webkit-animation-name: FadeInOut;
+		-webkit-animation-timing-function: ease-in-out;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-duration: 8s;
+	    animation-name: FadeInOut;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
+	}
+	
+
+  	@-webkit-keyframes FadeInOut {
+	  	0% { opacity:1;}
+		17% {opacity:1;}
+		25% {opacity:0;}
+		92% {opacity:0;}
+  		100% {opacity:1;}	
+	}
+	
+	@keyframes FadeInOut {
+	  	0% { opacity:1;}
+		17% {opacity:1;}
+		25% {opacity:0;}
+		92% {opacity:0;}
+  		100% {opacity:1;}	
+	}
+	
+	img:nth-of-type(1) {
+	  -webkit-animation-delay: 6s;
+	  animation-delay: 6s;
+	}
+	img:nth-of-type(2) {
+	  -webkit-animation-delay: 4s;
+	  animation-delay: 4s;
+	}
+	img:nth-of-type(3) {
+	  -webkit-animation-delay: 2s;
+	  animation-delay: 2s;
+	}
+	img:nth-of-type(4) {
+	  -webkit-animation-delay: 0;
+	  animation-delay: 0;
+	}
+}
+#left-image {
+	position: relative;
+	height: 234px;
+	width: 194px;
+	float: left;
+	margin-left: -12px;
+	top: 41px;
+	background: url('../images/img1.png') no-repeat;
+}
+
+#right-image {
+	position: relative;
+	background: url('../images/img3.png') no-repeat;
+	height: 220px;
+	width: 500px;
+	float: right;
+	top: 55px;
+	margin-right: -207px;
+}
+
+#left-container{
+
+	width: 49%;
+	
+	float:left;
+	color:white;
+	background: black;
+	ul li  {
+		list-style-type: none;
+		font-size: 0.7em;
+		clear: both;
+		img {
+			float:left;
+			margin: 0.3em 0.5em;
+		}
+	}
+}
+
+#right-container{
+
+	width: 49%;
+	height: 384px;
+	float:right;
+	color:white;
+	background: black;
+}
+
+#container {
+	background: gray;
+	padding: 1.5%;
+
+}
+
+input {
+	width:100%;		
+	padding: 1% 0%;
+	background: rgba(0,0,0,0.5);
+	color: #FFF;
+}
+
+#login, #register, #change-pwd {
+	background-color: #000;
+	color: #FFF;
+}
+
+#footer {
+ 	height: 200px;
+ 	background: blue;
+ 	margin-bottom: 20px;
+}
+
+@media all and (min-width: 480px) {
+	.hidden-menu {
+		display: none;
+	}
+}
+	
+@media all and (max-width: 480px) {
+	#menu {
+		display: none;
+	}
+	
+	hidden-menu {
+		display: block;
+	}
+	
+	li {
+		text-align:center;
+	}
+	
+	#hidden-links {
+		display: none;
+	}
+	
+	#menu-link:hover #hidden-links {
+		display: block;
+	}
+}
